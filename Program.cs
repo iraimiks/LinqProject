@@ -32,7 +32,12 @@ namespace LinqProject
 
             Console.WriteLine("---------------");
             ShowELementsValues(listCarsContains);
+            // orderby comes with Decending /Acending
 
+            var listCarsOrderBy = from car in cars orderby car descending select car;
+
+            Console.WriteLine("---------------");
+            ShowELementsValues(listCarsOrderBy);
         }
 
         static void ShowELementsValues(IEnumerable<string> list)
